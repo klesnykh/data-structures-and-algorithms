@@ -23,3 +23,4 @@ To run your tests
 - Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
 
 [Challenge 01](./javascript/401/challenge-01/README.md)
+[Challenge 02](./javascript/401/challenge-02/README.md)  
