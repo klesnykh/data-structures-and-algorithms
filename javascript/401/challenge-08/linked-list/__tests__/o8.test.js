@@ -1,7 +1,7 @@
 'use strict';
 
 // Require our linked list implementation
-const {LinkedList, ListNode} = require('../index');
+const {LinkedList, ListNode, zipLists} = require('../index');
 
 xdescribe('Linked List', () => {
   test('test 1. Should successfully instantiate an empty linked list', () => {
@@ -142,5 +142,55 @@ xdescribe('Code Challenge 07', () => {
     list.append(111);
 
     expect(list.kthFromEnd(1)).toEqual(11);
+  });
+});
+
+describe('Code Challenge 08', () => {
+  test('test 1. zip 2 linked lists of equal length', () => {
+    let list1 = new LinkedList();
+    list1.append(1);
+    list1.append(11);
+    list1.append(111);
+
+    let list2 = new LinkedList();
+    list2.append(2);
+    list2.append(22);
+    list2.append(222);
+
+    expect(zipLists(list1, list2).size).toEqual(6);
+  });
+
+  test('test 2. zip 2 linked lists where list1 is LONGER than list2', () => {
+    let list1 = new LinkedList();
+    list1.append(1);
+    list1.append(11);
+    list1.append(111);
+    list1.append(1111);
+
+    let list2 = new LinkedList();
+    list2.append(2);
+    list2.append(22);
+    list2.append(222);
+
+    let list = zipLists(list1, list2);
+    console.log(list.vals());
+    expect(list.size).toEqual(7);
+  });
+
+  test('test 2. zip 2 linked lists where list1 is SHORTER than list2', () => {
+    let list1 = new LinkedList();
+    list1.append(1);
+    list1.append(11);
+    list1.append(111);
+
+    let list2 = new LinkedList();
+    list2.append(2);
+    list2.append(22);
+    list2.append(222);
+    list1.append(2222);
+
+    let list = zipLists(list1, list2);
+    console.log(list.vals());
+    expect(list.size).toEqual(7);
   });
 });
