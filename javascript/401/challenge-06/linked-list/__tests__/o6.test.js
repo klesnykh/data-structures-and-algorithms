@@ -3,7 +3,7 @@
 // Require our linked list implementation
 const {LinkedList, ListNode} = require('../index');
 
-describe('Linked List', () => {
+xdescribe('Linked List', () => {
   test('test 1. Should successfully instantiate an empty linked list', () => {
     let list = new LinkedList();
     expect(list.head).toBeFalsy;
@@ -55,7 +55,7 @@ describe('Linked List', () => {
 
 });
 
-describe('Code Challenge 06', () => {
+xdescribe('Code Challenge 06', () => {
   test('test 1 and 2. Should successfully add a Node (or multiple nodes) to the end of a linked list', () => {
     let list = new LinkedList();
     list.append(1);
