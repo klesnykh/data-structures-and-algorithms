@@ -1,3 +1,3 @@
-# Challenge 10: Stacks/Queues
+# Challenge 11: Stack-Queue Pseudo
 
 ![whiteboard](../img/CodeChallenge11.jpg)
