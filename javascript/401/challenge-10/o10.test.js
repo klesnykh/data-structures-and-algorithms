@@ -1,7 +1,7 @@
 'use strict';
 
 // Require our linked list implementation
-const {LinkedList, Stack, Queue, zipLists} = require('./index');
+const {Stack, Queue} = require('./index');
 
 describe('Code Challenge 10: Stacks', () => {
   test('Should be able to push and peek the top of a stack if a new stack can be created', () => {
