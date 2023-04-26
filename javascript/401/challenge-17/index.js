@@ -113,4 +113,25 @@ class BinarySearchTree extends BinaryTree {
   }
 }
 
-module.exports = {BinaryTree, BinarySearchTree, Node};
+function breadthFirst(tree){
+  let arrQueue = [];
+  let returnArr = [];
+  arrQueue.push(tree.root);
+
+  while(arrQueue[0]){
+    let current = arrQueue.shift();
+    returnArr.push(current.data);
+    if(current.left){
+      arrQueue.push(current.left);
+    }
+    if(current.right){
+      arrQueue.push(current.right);
+    }
+    console.log(returnArr);
+  }
+
+  return returnArr;
+
+}
+
+module.exports = {BinaryTree, BinarySearchTree, Node, breadthFirst};
