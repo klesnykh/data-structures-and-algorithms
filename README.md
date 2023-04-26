@@ -36,3 +36,4 @@ To run your tests
 - [Challenge 14](./javascript/401/challenge-14/README.md)
 - [Challenge 16](./javascript/401/challenge-16/README.md)
 - [Challenge 17](./javascript/401/challenge-17/README.md)
+- [Challenge 18](./javascript/401/challenge-18/README.md)
