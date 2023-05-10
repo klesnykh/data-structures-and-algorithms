@@ -1,4 +1,4 @@
-# Challenge 17: Tree Fizz Buzz
+# Challenge 26: insertionSort
 
 ![whiteboard](../img/CodeChallenge26.png)
 
