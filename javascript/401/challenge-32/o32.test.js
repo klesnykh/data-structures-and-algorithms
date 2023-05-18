@@ -3,8 +3,8 @@
 // Require our linked list implementation
 const {BinarySearchTree, tree_intersection} = require('./treeIntersection/tree-intersection');
 
-describe('Code Challenge 14: BinarySearchTree', () => {
-  test('Should add nodes to the correct places in a BST', () => {
+describe('Code Challenge 32: Tree Intersection', () => {
+  test('Should show all similar vals in 2 trees', () => {
     let tree = new BinarySearchTree;
     tree.add(10);
     tree.add(5);
