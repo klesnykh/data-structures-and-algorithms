@@ -1,9 +1,8 @@
 'use strict';
-
 const {Graph} = require('../challenge-35/index');
-const {breadthFirst} = require('./index');
+const {businessTrip} = require('./index');
 
-describe('Code Challenge 36: Graphs Breadth First', () => {
+describe('Code Challenge 37: Graphs BusinessTrip', () => {
   let graph = new Graph();
   graph.addNode(1);
   graph.addNode(2);
@@ -20,11 +19,11 @@ describe('Code Challenge 36: Graphs Breadth First', () => {
   let node5 = nodes[4];
   let node6 = nodes[5];
 
-  graph.addEdge(node1, node2);
+  graph.addEdge(node1, node2, 150);
 
   graph.addEdge(node2, node1);
   graph.addEdge(node2, node3);
-  graph.addEdge(node2, node4);
+  graph.addEdge(node2, node4, 50);
 
   graph.addEdge(node3, node2);
   graph.addEdge(node3, node4);
@@ -42,10 +41,12 @@ describe('Code Challenge 36: Graphs Breadth First', () => {
   graph.addEdge(node6, node4);
   graph.addEdge(node6, node5);
 
-  test('Should be able to perform a proper breadth first traversal', () => {
-    let arr = breadthFirst(node1, graph);
-    let vals = arr.map(node => node.data);
-    console.log(vals);
-    expect(vals).toEqual([1,2,3,4,6,5]);
+  test('Should be able to get the cost of a trip (edge sum for node data array being passed in)', () => {
+
+    expect(businessTrip(graph, [1, 2, 4])).toEqual(200);
+  });
+  test('Should return null if that trip doesnt exist', () => {
+
+    expect(businessTrip(graph, [1, 3])).toEqual(null);
   });
 });
