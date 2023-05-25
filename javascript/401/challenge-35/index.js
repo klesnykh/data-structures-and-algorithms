@@ -33,6 +33,17 @@ class Graph {
   size(){
     return this.size;
   }
+
+  graphDepthFirst(node, arr=[]){
+    arr.push(node.data);
+    let edges = this.getNeighbors(node);
+    edges.forEach(neighbor => {
+      if(!arr.includes(neighbor.node.data)){
+        this.graphDepthFirst(neighbor.node, arr);
+      }
+    });
+    return arr;
+  }
 }
 
 class Node {
